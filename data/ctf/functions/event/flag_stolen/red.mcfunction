@@ -1,0 +1,1 @@
+say "The Red Flag has been stolen!"

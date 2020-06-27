@@ -1,0 +1,1 @@
+scoreboard objectives add FlagPresent dummy "Flag at spawn"
