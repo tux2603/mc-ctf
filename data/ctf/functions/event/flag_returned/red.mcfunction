@@ -1,1 +1,0 @@
-say "The Red Flag has been returned!"
