@@ -9,14 +9,16 @@ kill @a[team=cola]
 clear @a
 gamemode adventure @a
 
-replaceitem entity @a[team=cola] armor.chest minecraft:leather_chestplate{Enchantments:[{id:unbreaking,lvl:1000000}],display:{color:16711680}}
-replaceitem entity @a[team=cecs] armor.chest minecraft:leather_chestplate{Enchantments:[{id:unbreaking,lvl:1000000}],display:{color:255}}
-replaceitem entity @a armor.legs minecraft:iron_leggings{Enchantments:[{id:unbreaking,lvl:1000000}]}
-replaceitem entity @a armor.feet minecraft:iron_boots{Enchantments:[{id:unbreaking,lvl:1000000}]}
+replaceitem entity @a[team=cola] armor.chest minecraft:leather_chestplate{Enchantments:[{id:unbreaking,lvl:1000000000}],display:{color:16711680}}
+replaceitem entity @a[team=cecs] armor.chest minecraft:leather_chestplate{Enchantments:[{id:unbreaking,lvl:1000000000}],display:{color:255}}
+replaceitem entity @a armor.legs minecraft:iron_leggings{Enchantments:[{id:unbreaking,lvl:1000000000}]}
+replaceitem entity @a armor.feet minecraft:iron_boots{Enchantments:[{id:unbreaking,lvl:1000000000}]}
 
-give @a minecraft:iron_sword{Enchantments:[{id:unbreaking,lvl:1000000}]}
-give @a bow{Enchantments:[{id:infinity,lvl:1},{id:unbreaking,lvl:1000000},{id:power,lvl:5}]}
+give @a minecraft:iron_sword{Enchantments:[{id:unbreaking,lvl:1000000000}]}
+give @a bow{Enchantments:[{id:infinity,lvl:1},{id:unbreaking,lvl:1000000000},{id:power,lvl:3}]}
 give @a minecraft:arrow 1
+give @a minecraft:ender_pearl 8
+give @a minecraft:tipped_arrow{CustomPotionEffects:[{Id:2,Duration:160}],CustomPotionColor:3574} 16
 
 # Bring the flags back to base
 execute at @e[name="BlueBase"] run setblock ~ ~1 ~ minecraft:blue_banner{Patterns:[{Pattern:rd,Color:3},{Pattern:sc,Color:0}]}
