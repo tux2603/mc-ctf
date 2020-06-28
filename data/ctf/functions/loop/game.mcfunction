@@ -21,7 +21,12 @@ scoreboard players set @a CallStack00 0
 execute at @e[scores={HasBlueFlag=1,IsDead=0}] if entity @e[scores={HasBlueFlag=1,IsDead=0}] run tp @e[name="BlueMobile"] ~ ~ ~
 execute at @e[scores={HasRedFlag=1,IsDead=0}] if entity @e[scores={HasRedFlag=1,IsDead=0}] run tp @e[name="RedMobile"] ~ ~ ~
 
+# Play sounds if the flag is being stolen
+execute at @e[name="BlueMobile"] if entity @e[team=cola,scores={HasBlueFlag=1,IsDead=0}] run playsound minecraft:block.note_block.bell ambient @a ~ ~ ~ 1 0.3 0.1
+execute at @e[name="BlueMobile"] if entity @e[name="BlueMobile",scores={FlagPresent=1}] run playsound minecraft:block.note_block.bell ambient @a ~ ~ ~ 1 0.3 0.1
 
+execute at @e[name="RedMobile"] if entity @e[team=cecs,scores={HasRedFlag=1,IsDead=0}] run playsound minecraft:block.note_block.bell ambient @a ~ ~ ~ 1 0.3 0.1
+execute at @e[name="RedMobile"] if entity @e[name="RedMobile",scores={FlagPresent=1}] run playsound minecraft:block.note_block.bell ambient @a ~ ~ ~ 1 0.3 0.1
 
 # # If the player who had the flag died
 execute if entity @e[scores={HasBlueFlag=1,IsDead=1}] run scoreboard players set @e[scores={HasBlueFlag=1,IsDead=1}] CallStack00 1

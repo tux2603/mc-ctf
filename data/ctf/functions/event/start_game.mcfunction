@@ -4,7 +4,8 @@ function ctf:setup/teams
 difficulty peaceful
 gamerule keepInventory true
 
-kill @a
+kill @a[team=cecs]
+kill @a[team=cola]
 clear @a
 gamemode adventure @a
 
@@ -20,11 +21,11 @@ give @a minecraft:arrow 1
 # Bring the flags back to base
 execute at @e[name="BlueBase"] run setblock ~ ~1 ~ minecraft:blue_banner{Patterns:[{Pattern:rd,Color:3},{Pattern:sc,Color:0}]}
 execute at @e[name="BlueMobile"] run setblock ~ ~ ~ minecraft:air
-execute at @e[name="BlueBase"] tp @e[name="BlueMobile"] ~ ~ ~
+execute at @e[name="BlueBase"] run tp @e[name="BlueMobile"] ~ ~ ~
 
 execute at @e[name="RedBase"] run setblock ~ ~1 ~ minecraft:red_banner{Patterns:[{Pattern:rd,Color:6},{Pattern:sc,Color:0}]}
 execute at @e[name="RedMobile"] run setblock ~ ~ ~ minecraft:air
-execute at @e[name="RedBase"] tp @e[name="RedMobile"] ~ ~ ~
+execute at @e[name="RedBase"] run tp @e[name="RedMobile"] ~ ~ ~
 
 # Reset scores
 scoreboard players set @e[name="BlueBase"] FlagPresent 1
