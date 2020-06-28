@@ -67,6 +67,19 @@ scoreboard players set @a CallStack00 0
 
 # Update deaths
 scoreboard players set @e[scores={DeathRegisterd=1}] IsDead 0
+clear @e[scores={DeathRegisterd=1}]
+
+replaceitem entity @e[scores={DeathRegisterd=1},team=cola] armor.chest minecraft:leather_chestplate{Enchantments:[{id:unbreaking,lvl:1000}],display:{color:16711680}}
+replaceitem entity @e[scores={DeathRegisterd=1},team=cecs] armor.chest minecraft:leather_chestplate{Enchantments:[{id:unbreaking,lvl:1000}],display:{color:255}}
+replaceitem entity @e[scores={DeathRegisterd=1}] armor.legs minecraft:iron_leggings{Enchantments:[{id:unbreaking,lvl:1000}]}
+replaceitem entity @e[scores={DeathRegisterd=1}] armor.feet minecraft:iron_boots{Enchantments:[{id:unbreaking,lvl:1000}]}
+
+give @e[scores={DeathRegisterd=1}] minecraft:iron_sword{Enchantments:[{id:unbreaking,lvl:1000}]}
+give @e[scores={DeathRegisterd=1}] bow{Enchantments:[{id:infinity,lvl:1},{id:unbreaking,lvl:1000},{id:power,lvl:1}]}
+give @e[scores={DeathRegisterd=1}] minecraft:arrow 1
+give @e[scores={DeathRegisterd=1}] minecraft:ender_pearl 8
+give @e[scores={DeathRegisterd=1}] minecraft:tipped_arrow{CustomPotionEffects:[{Id:2,Duration:1600}],CustomPotionColor:3574} 16
+
 scoreboard players set @e[scores={DeathRegisterd=1}] DeathRegisterd 0
 scoreboard players set @e[scores={IsDead=1..100}] DeathRegisterd 1
 
