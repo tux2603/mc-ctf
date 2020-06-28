@@ -9,12 +9,13 @@ kill @a[team=cola]
 clear @a
 gamemode adventure @a
 
-replaceitem entity @a armor.chest minecraft:iron_chestplate{Enchantments:[{id:unbreaking,lvl:1000000}]}
+replaceitem entity @a[team=cola] armor.chest minecraft:leather_chestplate{Enchantments:[{id:unbreaking,lvl:1000000}],display:{color:16711680}}
+replaceitem entity @a[team=cecs] armor.chest minecraft:leather_chestplate{Enchantments:[{id:unbreaking,lvl:1000000}],display:{color:255}}
 replaceitem entity @a armor.legs minecraft:iron_leggings{Enchantments:[{id:unbreaking,lvl:1000000}]}
 replaceitem entity @a armor.feet minecraft:iron_boots{Enchantments:[{id:unbreaking,lvl:1000000}]}
 
 give @a minecraft:iron_sword{Enchantments:[{id:unbreaking,lvl:1000000}]}
-give @a bow{Enchantments:[{id:infinity,lvl:1},{id:unbreaking,lvl:1000000}]}
+give @a bow{Enchantments:[{id:infinity,lvl:1},{id:unbreaking,lvl:1000000},{id:power,lvl:5}]}
 give @a minecraft:arrow 1
 
 # Bring the flags back to base
