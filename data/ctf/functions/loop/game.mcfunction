@@ -38,5 +38,4 @@ execute at @e[name="BlueBase"] as @p[team=cecs,distance=..3,scores={HasRedFlag=1
 # Update deaths
 scoreboard players set @e[scores={DeathRegisterd=1}] IsDead 0
 scoreboard players set @e[scores={DeathRegisterd=1}] DeathRegisterd 0
-
 scoreboard players set @e[scores={IsDead=1}] DeathRegisterd 1
