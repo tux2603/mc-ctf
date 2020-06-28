@@ -71,3 +71,5 @@ scoreboard players set @a CallStack00 0
 scoreboard players set @e[scores={DeathRegisterd=1}] IsDead 0
 scoreboard players set @e[scores={DeathRegisterd=1}] DeathRegisterd 0
 scoreboard players set @e[scores={IsDead=1..100}] DeathRegisterd 1
+
+weather clear
