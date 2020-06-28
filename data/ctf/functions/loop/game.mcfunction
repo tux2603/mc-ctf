@@ -72,4 +72,4 @@ scoreboard players set @e[scores={IsDead=1..100}] DeathRegisterd 1
 
 weather clear
 
-effect give @a minecraft:speed 100000 2 false
+effect give @a minecraft:speed 100000 2 true
