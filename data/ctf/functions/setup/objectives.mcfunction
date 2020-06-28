@@ -10,3 +10,5 @@ scoreboard objectives add FlagsStolen dummy "Flags stolen"
 scoreboard objectives add FlagsRecovered dummy "Flags recovered"
 scoreboard objectives add FlagsReturned dummy "Flags returned"
 scoreboard objectives add FlagsDropped dummy "Flags dropped"
+
+scoreboard objectives add CallStack00 dummy "Call Stack Slot x00"

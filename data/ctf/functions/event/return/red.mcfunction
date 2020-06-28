@@ -1,10 +1,10 @@
 say "The red flag has been returned!"
-scoreboard players set @s HasRedFlag 0
-scoreboard players add @s FlagsReturned 1
+scoreboard players set @e[scores={CallStack00=1}] HasRedFlag 0
+scoreboard players add @e[scores={CallStack00=1}] FlagsReturned 1
 
-replaceitem entity @s armor.head minecraft:air
+replaceitem entity @e[scores={CallStack00=1}] armor.head minecraft:air
 
 # Respawn the flag
-execute as @e[name="RedBase"] at @s run setblock ~ ~1 ~ minecraft:red_banner{Patterns:[{Pattern:rd,Color:6},{Pattern:sc,Color:0}]}
+execute at @e[name="RedBase"] run setblock ~ ~1 ~ minecraft:red_banner{Patterns:[{Pattern:rd,Color:6},{Pattern:sc,Color:0}]}
 scoreboard players set @e[name="RedBase"] FlagPresent 1
 scoreboard players set @e[name="RedMobile"] FlagPresent 0
