@@ -8,24 +8,28 @@ kill @a[team=cecs]
 kill @a[team=cola]
 clear @a
 gamemode adventure @a
+effect clear @a
 
 replaceitem entity @a[team=cola] armor.chest minecraft:leather_chestplate{Enchantments:[{id:unbreaking,lvl:1000}],display:{color:16711680}}
 replaceitem entity @a[team=cecs] armor.chest minecraft:leather_chestplate{Enchantments:[{id:unbreaking,lvl:1000}],display:{color:255}}
 replaceitem entity @a armor.legs minecraft:iron_leggings{Enchantments:[{id:unbreaking,lvl:1000}]}
 replaceitem entity @a armor.feet minecraft:iron_boots{Enchantments:[{id:unbreaking,lvl:1000}]}
 
-give @a minecraft:tipped_arrow{CustomPotionEffects:[{Id:2,Duration:1600}],CustomPotionColor:3574} 16
 give @a minecraft:iron_sword{Enchantments:[{id:unbreaking,lvl:1000}]}
-give @a bow{Enchantments:[{id:infinity,lvl:1},{id:unbreaking,lvl:1000},{id:power,lvl:1}]}
-give @a minecraft:arrow 1
+give @a minecraft:bow{Enchantments:[{id:infinity,lvl:1},{id:unbreaking,lvl:1000},{id:power,lvl:1}]}
 give @a minecraft:ender_pearl 8
+give @a minecraft:arrow 1
+give @a minecraft:tipped_arrow{CustomPotionEffects:[{Id:2,Duration:1600}],CustomPotionColor:3574} 16
+
 
 # Bring the flags back to base
 execute at @e[name="BlueBase"] run setblock ~ ~1 ~ minecraft:blue_banner{Patterns:[{Pattern:rd,Color:3},{Pattern:sc,Color:0}]}
 execute at @e[name="BlueBase"] run tp @e[name="BlueMobile"] ~ ~ ~
+execute at @e[name="BlueBase"] run spawnpoint @a[team=cecs] ~ ~1 ~
 
 execute at @e[name="RedBase"] run setblock ~ ~1 ~ minecraft:red_banner{Patterns:[{Pattern:rd,Color:6},{Pattern:sc,Color:0}]}
 execute at @e[name="RedBase"] run tp @e[name="RedMobile"] ~ ~ ~
+execute at @e[name="RedBase"] run spawnpoint @a[team=cola] ~ ~1 ~
 
 # Reset scores
 scoreboard players set @e[name="BlueBase"] FlagPresent 1
@@ -44,3 +48,5 @@ scoreboard players set @a FlagsRecovered 0
 scoreboard players set @a FlagsReturned 0
 scoreboard players set @a FlagsDropped 0
 scoreboard players set @e CallStack00 0
+
+scoreboard objectives setdisplay sidebar FlagsCaptured
