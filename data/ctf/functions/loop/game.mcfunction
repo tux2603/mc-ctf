@@ -21,7 +21,9 @@ scoreboard players set @a CallStack00 0
 execute at @e[scores={HasBlueFlag=1,IsDead=0}] if entity @e[scores={HasBlueFlag=1,IsDead=0}] run tp @e[name="BlueMobile"] ~ ~ ~
 execute at @e[scores={HasRedFlag=1,IsDead=0}] if entity @e[scores={HasRedFlag=1,IsDead=0}] run tp @e[name="RedMobile"] ~ ~ ~
 
-# # If the player who had the flag died
+
+
+# If the player who had the flag died
 execute if entity @e[scores={HasBlueFlag=1,IsDead=1}] run scoreboard players set @e[scores={HasBlueFlag=1,IsDead=1}] CallStack00 1
 execute if entity @e[scores={CallStack00=1}] run function ctf:event/drop/blue
 scoreboard players set @a CallStack00 0
@@ -34,21 +36,10 @@ scoreboard players set @a CallStack00 0
 
 # If a player recovers their team's flag
 execute at @e[name="BlueMobile",scores={FlagPresent=1}] if entity @p[team=cecs,distance=..3] run scoreboard players set @p[team=cecs,distance=..3] CallStack00 1
-execute if entity @e[scores={CallStack00=1}] run function ctf:event/recover/blue
-scoreboard players set @a CallStack00 0
-
-execute at @e[name="RedMobile",scores={FlagPresent=1}] if entity @p[team=cola,distance=..3] run scoreboard players set @p[team=cola,distance=..3] CallStack00 1
-execute if entity @e[scores={CallStack00=1}] run function ctf:event/recover/red
-scoreboard players set @a CallStack00 0
-
-
-
-# # A player returns the team's flag
-execute at @e[name="BlueBase",scores={FlagPresent=0}] if entity @p[team=cecs,distance=..3,scores={HasBlueFlag=1,IsDead=0}] run scoreboard players set @p[team=cecs,distance=..3,scores={HasBlueFlag=1,IsDead=0}] CallStack00 1
 execute if entity @e[scores={CallStack00=1}] run function ctf:event/return/blue
 scoreboard players set @a CallStack00 0
 
-execute at @e[name="RedBase",scores={FlagPresent=0}] if entity @p[team=cola,distance=..3,scores={HasRedFlag=1,IsDead=0}] run scoreboard players set @p[team=cola,distance=..3,scores={HasRedFlag=1,IsDead=0}] CallStack00 1
+execute at @e[name="RedMobile",scores={FlagPresent=1}] if entity @p[team=cola,distance=..3] run scoreboard players set @p[team=cola,distance=..3] CallStack00 1
 execute if entity @e[scores={CallStack00=1}] run function ctf:event/return/red
 scoreboard players set @a CallStack00 0
 
@@ -77,9 +68,9 @@ replaceitem entity @a[scores={DeathRegisterd=1}] armor.feet minecraft:iron_boots
 
 give @a[scores={DeathRegisterd=1}] minecraft:iron_sword{Enchantments:[{id:unbreaking,lvl:1000}]}
 give @a[scores={DeathRegisterd=1}] minecraft:bow{Enchantments:[{id:infinity,lvl:1},{id:unbreaking,lvl:1000},{id:power,lvl:1}]}
-give @a[scores={DeathRegisterd=1}] minecraft:ender_pearl 8
+give @a[scores={DeathRegisterd=1}] minecraft:ender_pearl 2
 give @a[scores={DeathRegisterd=1}] minecraft:arrow 1
-give @a[scores={DeathRegisterd=1}] minecraft:tipped_arrow{CustomPotionEffects:[{Id:2,Duration:1600}],CustomPotionColor:3574} 16
+give @a[scores={DeathRegisterd=1}] minecraft:tipped_arrow{CustomPotionEffects:[{Id:2,Amplifier:5,Duration:4800,ShowParticles:0b}],CustomPotionColor:5878,display:{Name:"\"Makem Slow\""}}
 
 scoreboard players set @e[scores={DeathRegisterd=1}] DeathRegisterd 0
 scoreboard players set @e[scores={IsDead=1..100}] DeathRegisterd 1
