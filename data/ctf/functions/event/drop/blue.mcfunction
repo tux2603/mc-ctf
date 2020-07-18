@@ -1,4 +1,4 @@
-tellraw @a [{"selector": "@e[scores={CallStack00=1}]", "color": "red"}, {"color": "green", "text": " dropped the blue flag!"}]
+tellraw @a [{"selector": "@e[scores={CallStack00=1}]", "color": "red"}, {"color": "green", "text": " dropped the "}, {"color": "blue", "text": "blue flag"}, {"color": "green", "text": "!"}]
 
 scoreboard players add @e[scores={CallStack00=1}] FlagsDropped 1
 scoreboard players add RedTeam TeamDropped 1

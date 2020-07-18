@@ -1,4 +1,4 @@
-tellraw @a [{"color": "green", "text": "The blue flag has been stolen by "}, {"selector": "@e[scores={CallStack00=1}]", "color": "red"}, {"color": "green", "text": "!"}]
+tellraw @a [{"color": "green", "text": "The "}, {"color": "blue", "text": "blue flag"}, {"color": "green", "text": " has been stolen by "}, {"selector": "@e[scores={CallStack00=1}]", "color": "red"}, {"color": "green", "text": "!"}]
 
 scoreboard players add @e[scores={CallStack00=1}] FlagsStolen 1
 scoreboard players add RedTeam TeamStolen 1

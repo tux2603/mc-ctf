@@ -1,4 +1,4 @@
-tellraw @a [{"color": "green", "text": "The red flag has been recovered by "}, {"selector": "@e[scores={CallStack00=1}]", "color": "red"}, {"color": "green", "text": "!"}]
+tellraw @a [{"color": "green", "text": "The red flag "}, {"color": "red", "text": "red flag"}, {"color": "green", "text": " has been recovered by "}, {"selector": "@e[scores={CallStack00=1}]", "color": "red"}, {"color": "green", "text": "!"}]
 
 scoreboard players set @e[scores={CallStack00=1}] HasRedFlag 0
 scoreboard players add @e[scores={CallStack00=1}] FlagsRecovered 1
