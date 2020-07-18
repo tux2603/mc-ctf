@@ -19,7 +19,7 @@ execute at @e[name="BlueBase"] run setblock ~ ~1 ~ minecraft:light_blue_banner{P
 execute at @e[name="BlueBase"] run tp @e[name="BlueMobile"] ~ ~ ~
 execute at @e[name="BlueBase"] run spawnpoint @a[team=cecs] ~ ~1 ~
 
-execute at @e[name="RedBase"] run setblock ~ ~1 ~ minecraft:red_banner{Patterns:[{Color:6,Pattern:"lud"},{Color:0,Pattern:"sc"},{Color:11,Pattern:"mc"},{Color:5,Pattern:"glb"}]}
+execute at @e[name="RedBase"] run setblock ~ ~1 ~ minecraft:red_banner{Patterns:[{Color:6,Pattern:"tt"},{Color:6,Pattern:"bt"},{Color:14,Pattern:"mr"},{Color:0,Pattern:"sc"},{Color:11,Pattern:"mc"},{Color:5,Pattern:"glb"}]}
 execute at @e[name="RedBase"] run tp @e[name="RedMobile"] ~ ~ ~
 execute at @e[name="RedBase"] run spawnpoint @a[team=cola] ~ ~1 ~
 

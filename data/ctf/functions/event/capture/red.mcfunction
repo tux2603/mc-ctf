@@ -6,7 +6,7 @@ scoreboard players add BlueTeam TeamCaptured 1
 replaceitem entity @e[scores={CallStack00=1}] armor.head minecraft:air
 
 # Respawn the flag
-execute at @e[name="RedBase"] run setblock ~ ~1 ~ minecraft:red_banner{Patterns:[{Color:6,Pattern:"lud"},{Color:0,Pattern:"sc"},{Color:11,Pattern:"mc"},{Color:5,Pattern:"glb"}]}
+execute at @e[name="RedBase"] run setblock ~ ~1 ~ minecraft:red_banner{Patterns:[{Color:6,Pattern:"tt"},{Color:6,Pattern:"bt"},{Color:14,Pattern:"mr"},{Color:0,Pattern:"sc"},{Color:11,Pattern:"mc"},{Color:5,Pattern:"glb"}]}
 scoreboard players set @e[name="RedBase"] FlagPresent 1
 scoreboard players set @e[name="RedMobile"] FlagPresent 0
 

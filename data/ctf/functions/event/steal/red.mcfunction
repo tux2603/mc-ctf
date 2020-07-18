@@ -3,7 +3,7 @@ tellraw @a [{"color": "green", "text": "The red flag has been stolen by "}, {"se
 scoreboard players add @e[scores={CallStack00=1}] FlagsStolen 1
 scoreboard players add BlueTeam TeamStolen 1
 
-replaceitem entity @e[scores={CallStack00=1}] armor.head minecraft:red_banner{BlockEntityTag:{Patterns:[{Color:6,Pattern:"lud"},{Color:0,Pattern:"sc"},{Color:11,Pattern:"mc"},{Color:5,Pattern:"glb"}]}}
+replaceitem entity @e[scores={CallStack00=1}] armor.head minecraft:red_banner{BlockEntityTag:{Patterns:[{Color:6,Pattern:"tt"},{Color:6,Pattern:"bt"},{Color:14,Pattern:"mr"},{Color:0,Pattern:"sc"},{Color:11,Pattern:"mc"},{Color:5,Pattern:"glb"}]}}
 
 # The player gets the flag and the base loses the flag
 scoreboard players set @e[scores={CallStack00=1}] HasRedFlag 1

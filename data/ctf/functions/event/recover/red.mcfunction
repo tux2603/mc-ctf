@@ -11,6 +11,6 @@ execute at @e[name="RedBase",scores={FlagPresent=1}] run setblock ~ ~1 ~ minecra
 execute at @e[name="RedMobile",scores={FlagPresent=1}] run setblock ~ ~ ~ minecraft:air replace
 
 # Respawn the flag
-execute at @e[name="RedBase"] run setblock ~ ~1 ~ minecraft:red_banner{Patterns:[{Color:6,Pattern:"lud"},{Color:0,Pattern:"sc"},{Color:11,Pattern:"mc"},{Color:5,Pattern:"glb"}]}
+execute at @e[name="RedBase"] run setblock ~ ~1 ~ minecraft:red_banner{Patterns:[{Color:6,Pattern:"tt"},{Color:6,Pattern:"bt"},{Color:14,Pattern:"mr"},{Color:0,Pattern:"sc"},{Color:11,Pattern:"mc"},{Color:5,Pattern:"glb"}]}
 scoreboard players set @e[name="RedBase"] FlagPresent 1
 scoreboard players set @e[name="RedMobile"] FlagPresent 0
