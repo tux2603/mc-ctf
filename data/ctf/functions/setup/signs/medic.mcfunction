@@ -1,0 +1,2 @@
+execute at @s anchored feet run setblock ~ ~ ~ minecraft:birch_sign
+execute at @s anchored feet run data merge block ~ ~ ~ {Text1:"{\"text\":\"[Medic Class]\",\"color\":\"green\",\"underlined\":true,\"clickEvent\":{\"action\":\"run_command\",\"value\":\"/tag @s add JoinMedic\"}}","Text2":"\"Healing potions\"","Text3":"\"Reduced speeds\"","Text4":"\"Support team\""}

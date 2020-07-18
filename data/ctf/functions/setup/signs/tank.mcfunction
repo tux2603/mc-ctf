@@ -1,0 +1,2 @@
+execute at @s anchored feet run setblock ~ ~ ~ minecraft:birch_sign
+execute at @s anchored feet run data merge block ~ ~ ~ {Text1:"{\"text\":\"[Tank Class]\",\"color\":\"green\",\"underlined\":true,\"clickEvent\":{\"action\":\"run_command\",\"value\":\"/tag @s add JoinTank\"}}","Text2":"\"Slow & Strong\"","Text3":"\"Powerful Bow\"","Text4":"\"Let's go defense\""}

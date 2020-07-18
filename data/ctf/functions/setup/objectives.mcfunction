@@ -17,5 +17,11 @@ scoreboard objectives add TeamDropped dummy "Flags dropped"
 
 scoreboard objectives add CallStack00 dummy "Call Stack Slot x00"
 
+scoreboard objectives add ParticleCooldown dummy "Particle Cooldown"
+
+scoreboard objectives add UsedNetherSword minecraft.used:minecraft.netherite_sword "Used netherite sword"
+
+scoreboard objectives add Health health "Player health"
+
 scoreboard objectives add UsedPearl minecraft.used:minecraft.ender_pearl "Player used ender pearl"
 scoreboard objectives add PearlCooldown dummy "Ender pearl cooldown"

@@ -12,7 +12,6 @@ effect clear @a
 
 replaceitem entity @a[team=cola] armor.chest minecraft:leather_chestplate{Enchantments:[{id:unbreaking,lvl:1000},{id:binding_curse,lvl:1}],display:{color:16711680}}
 replaceitem entity @a[team=cecs] armor.chest minecraft:leather_chestplate{Enchantments:[{id:unbreaking,lvl:1000},{id:binding_curse,lvl:1}],display:{color:255}}
-loot give @a loot ctf:classes/normie
 
 # Bring the flags back to base
 execute at @e[name="BlueBase"] run setblock ~ ~1 ~ minecraft:light_blue_banner{Patterns:[{Color:11,Pattern:"bo"},{Color:11,Pattern:"cbo"},{Color:11,Pattern:"mr"},{Color:8,Pattern:"mc"},{Color:0,Pattern:"flo"}]}
@@ -41,6 +40,7 @@ scoreboard players set @a FlagsReturned 0
 scoreboard players set @a FlagsDropped 0
 scoreboard players set @e CallStack00 0
 scoreboard players set @e PearlCooldown -1
+scoreboard players set @e ParticleCooldown 100
 
 scoreboard players set BlueTeam TeamCaptured 0
 scoreboard players set RedTeam TeamCaptured 0
@@ -50,6 +50,7 @@ scoreboard players set BlueTeam TeamRecovered 0
 scoreboard players set RedTeam TeamRecovered 0
 scoreboard players set BlueTeam TeamDropped 0
 scoreboard players set RedTeam TeamDropped 0
+
 
 scoreboard objectives setdisplay sidebar TeamCaptured
 scoreboard objectives setdisplay list FlagsCaptured

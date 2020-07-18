@@ -5,51 +5,6 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "minecraft:iron_sword",
-          "functions": [
-            {
-              "function": "minecraft:set_nbt",
-              "tag": "{Enchantments:[{id:sharpness,lvl:2},{id:unbreaking,lvl:1000}]}"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "rolls": 1,
-      "entries": [
-        {
-          "type": "minecraft:item",
-          "name": "minecraft:crossbow",
-          "functions": [
-            {
-              "function": "minecraft:set_nbt",
-              "tag": "{Enchantments:[{id:unbreaking,lvl:1000},{id:quick_charge,lvl:5}]}"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "rolls": 1,
-      "entries": [
-        {
-          "type": "minecraft:item",
-          "name": "minecraft:arrow",
-          "functions": [
-            {
-              "function": "minecraft:set_count",
-              "count": 128
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "rolls": 1,
-      "entries": [
-        {
-          "type": "minecraft:item",
           "name": "minecraft:cooked_beef",
           "functions": [
             {
@@ -65,11 +20,11 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "minecraft:firework_rocket",
+          "name": "minecraft:lingering_potion",
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{Fireworks:{Flight:1,Explosions:[{Type:1,Trail:1,Colors:[I;3887386]},{Type:1,Flicker:1,Colors:[I;13344850]},{Type:1,Trail:1,Colors:[I;3887386]},{Type:1,Flicker:1,Colors:[I;13344850]},{Type:1,Trail:1,Colors:[I;3887386]},{Type:1,Flicker:1,Colors:[I;13344850]}]}}"
+              "tag": "{Potion:\"minecraft:water\",CustomPotionEffects:[{Id:19,Duration:800}],display:{Name:\"\\\"Poison\\\"\"}}"
             },
             {
               "function": "minecraft:set_count",
@@ -84,11 +39,15 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "minecraft:iron_leggings",
+          "name": "minecraft:lingering_potion",
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{Enchantments:[{id:unbreaking,lvl:1000}]}"
+              "tag": "{Potion:\"minecraft:water\",CustomPotionEffects:[{Id:7}],display:{Name:\"\\\"Damage\\\"\"}}"
+            },
+            {
+              "function": "minecraft:set_count",
+              "count": 4
             }
           ]
         }
@@ -99,11 +58,15 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "minecraft:iron_boots",
+          "name": "minecraft:lingering_potion",
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{Enchantments:[{id:unbreaking,lvl:1000}]}"
+              "tag": "{Potion:\"minecraft:water\",CustomPotionEffects:[{Id:6}],display:{Name:\"\\\"Health\\\"\"}}"
+            },
+            {
+              "function": "minecraft:set_count",
+              "count": 2
             }
           ]
         }
@@ -114,15 +77,60 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "minecraft:iron_helmet",
+          "name": "minecraft:lingering_potion",
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{Enchantments:[{id:unbreaking,lvl:1000},{id:blast_protection,lvl:5}]}"
+              "tag": "{Potion:\"minecraft:water\",CustomPotionEffects:[{Id:25,Amplifier:1,Duration:600}],display:{Name:\"\\\"Levitation\\\"\"}}"
+            },
+            {
+              "function": "minecraft:set_count",
+              "count": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:lingering_potion",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{Potion:\"minecraft:water\",CustomPotionEffects:[{Id:14,Duration:600}],display:{Name:\"\\\"Invisibility\\\"\"}}"
+            },
+            {
+              "function": "minecraft:set_count",
+              "count": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:lingering_potion",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{CustomPotionEffects:[{Id:24,Duration:2400}],CustomPotionColor:16777016,display:{Name:\"\\\"Glowing\\\"\"}}"
+            },
+            {
+              "function": "minecraft:set_count",
+              "count": 2
             }
           ]
         }
       ]
     }
+    
+
+    
   ]
 }
