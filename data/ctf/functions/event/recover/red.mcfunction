@@ -1,12 +1,16 @@
-say "The red flag has been recovered!"
+tellraw @a [{"color": "green", "text": "The red flag has been recovered by "}, {"selector": "@e[scores={CallStack00=1}]", "color": "red"}, {"color": "green", "text": "!"}]
+
+scoreboard players set @e[scores={CallStack00=1}] HasRedFlag 0
 scoreboard players add @e[scores={CallStack00=1}] FlagsRecovered 1
+scoreboard players add RedTeam TeamRecovered 1
 
-replaceitem entity @e[scores={CallStack00=1}] armor.head minecraft:red_banner{Patterns:[{Pattern:rd,Color:6},{Pattern:sc,Color:0}]}
+replaceitem entity @e[scores={CallStack00=1}] armor.head minecraft:air
 
-# The player gets the flag and the base loses the flag
-scoreboard players set @e[scores={CallStack00=1}] HasRedFlag 1
+# remove the visible flag from the field
 execute at @e[name="RedBase",scores={FlagPresent=1}] run setblock ~ ~1 ~ minecraft:air replace
 execute at @e[name="RedMobile",scores={FlagPresent=1}] run setblock ~ ~ ~ minecraft:air replace
 
-scoreboard players set @e[name="RedBase",scores={FlagPresent=1}] FlagPresent 0
-scoreboard players set @e[name="RedMobile",scores={FlagPresent=1}] FlagPresent 0
+# Respawn the flag
+execute at @e[name="RedBase"] run setblock ~ ~1 ~ minecraft:red_banner{Patterns:[{Color:6,Pattern:"lud"},{Color:0,Pattern:"sc"},{Color:11,Pattern:"mc"},{Color:5,Pattern:"glb"}]}
+scoreboard players set @e[name="RedBase"] FlagPresent 1
+scoreboard players set @e[name="RedMobile"] FlagPresent 0
