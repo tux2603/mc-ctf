@@ -35,35 +35,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "minecraft:ender_pearl"
-        }
-      ]
-    },
-    {
-      "rolls": 1,
-      "entries": [
-        {
-          "type": "minecraft:item",
           "name": "minecraft:arrow"
-        }
-      ]
-    },
-    {
-      "rolls": 1,
-      "entries": [
-        {
-          "type": "minecraft:item",
-          "name": "minecraft:tipped_arrow",
-          "functions": [
-            {
-              "function": "minecraft:set_nbt",
-              "tag": "{CustomPotionEffects:[{Id:2,Amplifier:5,Duration:4800,ShowParticles:0b}],CustomPotionColor:5878,display:{Name:\"\\\"Makem Slow\\\"\"}}"
-            },
-            {
-              "function": "minecraft:set_count",
-              "count": 16
-            }
-          ]
         }
       ]
     },
@@ -77,6 +49,25 @@
             {
               "function": "minecraft:set_count",
               "count": 64
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:lingering_potion",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{CustomPotionEffects:[{Id:10,Amplifier:1,Duration:400,ShowParticles:0b},{Id:22,Amplifier:1,Duration:400,ShowParticles:0b},{Id:24,Duration:400,ShowParticles:0b}],CustomPotionColor:16122083,display:{Name:\"\\\"Healing Juice\\\"\"}}"
+            },
+            {
+              "function": "minecraft:set_count",
+              "count": 8
             }
           ]
         }

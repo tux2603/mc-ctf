@@ -1,17 +1,17 @@
 # A player steals a flag
-execute at @e[name="BlueBase",scores={FlagPresent=1}] if entity @e[name="RedBase",scores={FlagPresent=1}] if entity @p[team=cola,distance=..3] run scoreboard players set @p[team=cola,distance=..3] CallStack00 1
+execute at @e[name="BlueBase",scores={FlagPresent=1}] if entity @e[name="RedBase",scores={FlagPresent=1}] if entity @p[team=cola,distance=..3,tag=!Tank] run scoreboard players set @p[team=cola,distance=..3] CallStack00 1
 execute if entity @e[scores={CallStack00=1}] run function ctf:event/steal/blue
 scoreboard players set @a CallStack00 0
 
-execute at @e[name="BlueMobile",scores={FlagPresent=1}] if entity @e[name="RedBase",scores={FlagPresent=1}] if entity @p[team=cola,distance=..3] run scoreboard players set @p[team=cola,distance=..3] CallStack00 1
+execute at @e[name="BlueMobile",scores={FlagPresent=1}] if entity @e[name="RedBase",scores={FlagPresent=1}] if entity @p[team=cola,distance=..3,tag=!Tank] run scoreboard players set @p[team=cola,distance=..3] CallStack00 1
 execute if entity @e[scores={CallStack00=1}] run function ctf:event/steal/blue
 scoreboard players set @a CallStack00 0
 
-execute at @e[name="RedBase",scores={FlagPresent=1}] if entity @e[name="BlueBase",scores={FlagPresent=1}] if entity @p[team=cecs,distance=..3] run scoreboard players set @p[team=cecs,distance=..3] CallStack00 1
+execute at @e[name="RedBase",scores={FlagPresent=1}] if entity @e[name="BlueBase",scores={FlagPresent=1}] if entity @p[team=cecs,distance=..3,tag=!Tank] run scoreboard players set @p[team=cecs,distance=..3] CallStack00 1
 execute if entity @e[scores={CallStack00=1}] run function ctf:event/steal/red
 scoreboard players set @a CallStack00 0
 
-execute at @e[name="RedMobile",scores={FlagPresent=1}] if entity @e[name="BlueBase",scores={FlagPresent=1}] if entity @p[team=cecs,distance=..3] run scoreboard players set @p[team=cecs,distance=..3] CallStack00 1
+execute at @e[name="RedMobile",scores={FlagPresent=1}] if entity @e[name="BlueBase",scores={FlagPresent=1}] if entity @p[team=cecs,distance=..3,tag=!Tank] run scoreboard players set @p[team=cecs,distance=..3] CallStack00 1
 execute if entity @e[scores={CallStack00=1}] run function ctf:event/steal/red
 scoreboard players set @a CallStack00 0
 
@@ -62,7 +62,7 @@ effect give @a[scores={HasBlueFlag=1}] minecraft:glowing 1 1 true
 effect give @a[scores={HasRedFlag=1}] minecraft:glowing 1 1 true
 
 # Remove all pearls from the ground
-execute as @e[type=minecraft:item,nbt={Item:{id:"minecraft:ender_pearl"},OnGround:1b}] run kill @s
+execute as @e[type=minecraft:item,nbt={OnGround:1b}] run kill @s
 
 # If a player used an ender pearl, start the cooldown
 scoreboard players set @a[scores={UsedPearl=1..}] PearlCooldown 200
@@ -72,6 +72,10 @@ scoreboard players set @a[scores={UsedPearl=1..}] UsedPearl 0
 give @a[scores={PearlCooldown=0}] minecraft:ender_pearl
 
 scoreboard players remove @a[scores={PearlCooldown=0..}] PearlCooldown 1
+
+# Update player classes
+function ctf:event/join_class
+
 
 # Update deaths
 scoreboard players set @e[scores={DeathRegisterd=1}] IsDead 0
@@ -89,5 +93,10 @@ scoreboard players set @e[scores={IsDead=1..100}] DeathRegisterd 1
 
 weather clear
 
-effect give @a minecraft:speed 100000 1 true
+effect give @a[tag=Normie] minecraft:speed 1000000 1 true
+effect give @a[tag=Scout] minecraft:speed 1000000 3 true
+effect give @a[tag=Tank] minecraft:slowness 1000000 1 true
+effect give @a[tag=Tank] minecraft:weakness 1000000 1 true
+effect give @a[tag=Medic] minecraft:weakness 1000000 1 true
+effect give @a[tag=Medic] minecraft:jump_boost 1000000 7 true
 
