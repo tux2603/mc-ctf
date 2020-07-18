@@ -18,20 +18,14 @@ tag @a[tag=JoinNew] remove Medic
 tag @a[tag=JoinNew] remove Mage
 tag @a[tag=JoinNew] remove Spy
 
+
 loot give @a[tag=JoinNormie] loot ctf:classes/normie 
 tag @a[tag=JoinNormie] add Normie
 tag @a[tag=JoinNormie] remove JoinNormie
 
-
 loot give @a[tag=JoinScout] loot ctf:classes/scout 
 tag @a[tag=JoinScout] add Scout
 tag @a[tag=JoinScout] remove JoinScout
-
-
-loot give @a[tag=JoinTank] loot ctf:classes/tank
-tag @a[tag=JoinTank] add Tank
-tag @a[tag=JoinTank] remove JoinTank
-
 
 loot give @a[tag=JoinTank] loot ctf:classes/tank
 tag @a[tag=JoinTank] add Tank
@@ -49,4 +43,6 @@ loot give @a[tag=JoinSpy] loot ctf:classes/spy
 tag @a[tag=JoinSpy] add Spy
 tag @a[tag=JoinSpy] remove JoinSpy
 
+
+scoreboard players set @a[tag=JoinNew] PearlCooldown -1
 tag @a[tag=JoinNew] remove JoinNew
