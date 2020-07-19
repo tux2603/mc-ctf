@@ -35,36 +35,6 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "minecraft:leather_chestplate",
-          "functions": [
-            {
-              "function": "minecraft:set_nbt",
-              "tag": "{Enchantments:[{id:unbreaking,lvl:1}],display:{color:16711680}}"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "rolls": 1,
-      "entries": [
-        {
-          "type": "minecraft:item",
-          "name": "minecraft:leather_chestplate",
-          "functions": [
-            {
-              "function": "minecraft:set_nbt",
-              "tag": "{Enchantments:[{id:unbreaking,lvl:1}],display:{color:255}}"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "rolls": 1,
-      "entries": [
-        {
-          "type": "minecraft:item",
           "name": "minecraft:netherite_sword",
           "functions": [
             {
@@ -75,6 +45,25 @@
               "function": "minecraft:set_name",
               "name": "Assassin's Blade",
               "entity": "this"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:splash_potion",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{Potion:\"minecraft:water\",CustomPotionEffects:[{Id:14,Duration:600}],display:{Name:\"\\\"Invisibility\\\"\"}}"
+            },
+            {
+              "function": "minecraft:set_count",
+              "count": 1
             }
           ]
         }

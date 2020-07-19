@@ -9,7 +9,7 @@
             "functions": [
               {
                 "function": "minecraft:set_nbt",
-                "tag": "{Enchantments:[{id:sharpness,lvl:0},{id:unbreaking,lvl:1000}]}"
+                "tag": "{Enchantments:[{id:unbreaking,lvl:1000}]}"
               }
             ]
           }

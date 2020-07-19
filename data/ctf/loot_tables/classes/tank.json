@@ -24,7 +24,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{Enchantments:[{id:unbreaking,lvl:1000},{id:quick_charge,lvl:3}]}"
+              "tag": "{Enchantments:[{id:unbreaking,lvl:1000},{id:quick_charge,lvl:4}]}"
             }
           ]
         }

@@ -57,7 +57,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{CustomPotionEffects:[{Id:2,Amplifier:5,Duration:4800,ShowParticles:0b}],CustomPotionColor:5878,display:{Name:\"\\\"Makem Slow\\\"\"}}"
+              "tag": "{CustomPotionEffects:[{Id:2,Amplifier:3,Duration:300,ShowParticles:0b}],CustomPotionColor:5878,display:{Name:\"\\\"Makem Slow\\\"\"}}"
             },
             {
               "function": "minecraft:set_count",

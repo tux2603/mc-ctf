@@ -58,7 +58,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "minecraft:lingering_potion",
+          "name": "minecraft:splash_potion",
           "functions": [
             {
               "function": "minecraft:set_nbt",
@@ -81,26 +81,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{Potion:\"minecraft:water\",CustomPotionEffects:[{Id:25,Amplifier:1,Duration:300}],display:{Name:\"\\\"Levitation\\\"\"}}"
-            },
-            {
-              "function": "minecraft:set_count",
-              "count": 2
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "rolls": 1,
-      "entries": [
-        {
-          "type": "minecraft:item",
-          "name": "minecraft:lingering_potion",
-          "functions": [
-            {
-              "function": "minecraft:set_nbt",
-              "tag": "{Potion:\"minecraft:water\",CustomPotionEffects:[{Id:14,Duration:600}],display:{Name:\"\\\"Invisibility\\\"\"}}"
+              "tag": "{Potion:\"minecraft:water\",CustomPotionEffects:[{Id:25,Amplifier:1,Duration:600}],display:{Name:\"\\\"Levitation\\\"\"}}"
             },
             {
               "function": "minecraft:set_count",
