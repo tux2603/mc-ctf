@@ -24,7 +24,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{Enchantments:[{id:unbreaking,lvl:1000},{id:quick_charge,lvl:5}]}"
+              "tag": "{Enchantments:[{id:unbreaking,lvl:1000},{id:quick_charge,lvl:3}]}"
             }
           ]
         }
@@ -84,7 +84,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "minecraft:iron_leggings",
+          "name": "minecraft:diamond_leggings",
           "functions": [
             {
               "function": "minecraft:set_nbt",
@@ -99,7 +99,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "minecraft:iron_boots",
+          "name": "minecraft:diamond_boots",
           "functions": [
             {
               "function": "minecraft:set_nbt",
@@ -114,7 +114,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "minecraft:iron_helmet",
+          "name": "minecraft:diamond_helmet",
           "functions": [
             {
               "function": "minecraft:set_nbt",
