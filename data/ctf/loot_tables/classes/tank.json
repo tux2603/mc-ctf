@@ -24,7 +24,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{Enchantments:[{id:unbreaking,lvl:1000},{id:quick_charge,lvl:4}]}"
+              "tag": "{Enchantments:[{id:unbreaking,lvl:1000},{id:quick_charge,lvl:5}]}"
             }
           ]
         }
@@ -74,51 +74,6 @@
             {
               "function": "minecraft:set_count",
               "count": 4
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "rolls": 1,
-      "entries": [
-        {
-          "type": "minecraft:item",
-          "name": "minecraft:diamond_leggings",
-          "functions": [
-            {
-              "function": "minecraft:set_nbt",
-              "tag": "{Enchantments:[{id:unbreaking,lvl:1000}]}"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "rolls": 1,
-      "entries": [
-        {
-          "type": "minecraft:item",
-          "name": "minecraft:diamond_boots",
-          "functions": [
-            {
-              "function": "minecraft:set_nbt",
-              "tag": "{Enchantments:[{id:unbreaking,lvl:1000}]}"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "rolls": 1,
-      "entries": [
-        {
-          "type": "minecraft:item",
-          "name": "minecraft:diamond_helmet",
-          "functions": [
-            {
-              "function": "minecraft:set_nbt",
-              "tag": "{Enchantments:[{id:unbreaking,lvl:1000},{id:blast_protection,lvl:5}]}"
             }
           ]
         }

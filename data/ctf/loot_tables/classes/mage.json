@@ -24,6 +24,25 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
+              "tag": "{Potion:\"minecraft:water\",CustomPotionEffects:[{Id:25,Amplifier:1,Duration:600}],display:{Name:\"\\\"Levitation\\\"\"}}"
+            },
+            {
+              "function": "minecraft:set_count",
+              "count": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:lingering_potion",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
               "tag": "{Potion:\"minecraft:water\",CustomPotionEffects:[{Id:19,Duration:800}],display:{Name:\"\\\"Poison\\\"\"}}"
             },
             {
@@ -63,25 +82,6 @@
             {
               "function": "minecraft:set_nbt",
               "tag": "{Potion:\"minecraft:water\",CustomPotionEffects:[{Id:6}],display:{Name:\"\\\"Health\\\"\"}}"
-            },
-            {
-              "function": "minecraft:set_count",
-              "count": 2
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "rolls": 1,
-      "entries": [
-        {
-          "type": "minecraft:item",
-          "name": "minecraft:lingering_potion",
-          "functions": [
-            {
-              "function": "minecraft:set_nbt",
-              "tag": "{Potion:\"minecraft:water\",CustomPotionEffects:[{Id:25,Amplifier:1,Duration:600}],display:{Name:\"\\\"Levitation\\\"\"}}"
             },
             {
               "function": "minecraft:set_count",

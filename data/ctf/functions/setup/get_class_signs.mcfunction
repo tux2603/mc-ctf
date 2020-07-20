@@ -1,1 +1,0 @@
-give @p minecraft:birch_sign 1 {BlockEntityTag:{Text1:"{\"text\":\"Standard Class\",\"bold\":true,\"clickEvent\":{\"action\":\"run_command\",\"value\":\"tag @p add JoinNormie\"}}",Text2:"{\"text\":\"A bit of speed\"}",Text3:"{\"text\":\"A bit of armor\"}",Text4:"{\"text\":\"Nothing overly special\"}"},display:{Name:"Custom Sign"}}

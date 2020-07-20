@@ -1,2 +1,0 @@
-execute at @s anchored feet run setblock ~ ~ ~ minecraft:birch_sign
-execute at @s anchored feet run data merge block ~ ~ ~ {Text1:"{\"text\":\"[Spy Class]\",\"color\":\"green\",\"underlined\":true,\"clickEvent\":{\"action\":\"run_command\",\"value\":\"/tag @s add JoinSpy\"}}","Text2":"\"Hide your team\"","Text3":"\"Assassination\"","Text4":"\"Don't get caught\""}
