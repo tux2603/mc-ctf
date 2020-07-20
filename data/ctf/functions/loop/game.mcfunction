@@ -111,7 +111,7 @@ effect give @a[tag=Medic] minecraft:jump_boost 1000000 7 true
 effect give @a[tag=Mage] minecraft:weakness 1000000 1 true
 effect give @a[tag=Mage] minecraft:resistance 1000000 1 true
 effect give @a[tag=Mage,scores={HasBlueFlag=0,HasRedFlag=0}] minecraft:speed 1000000 1 true
-kill @a[tag=Spy,scores={UsedNetherSword=1..}]
+kill @a[tag=Assassin,scores={UsedNetherSword=1..}]
 
 execute at @a[tag=Medic,scores={ParticleCooldown=0}] run particle minecraft:heart ~ ~2 ~ 0.15 0.15 0.15 1 1
 
