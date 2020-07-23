@@ -89,7 +89,7 @@ tag @a[scores={DeathRegisterd=1}] remove Spy
 tag @a[scores={DeathRegisterd=1}] remove Tank
 effect clear @a[scores={DeathRegisterd=1}]
 
-
+replaceitem entity @a[scores={DeathRegisterd=1}] armor.head minecraft:air
 replaceitem entity @a[scores={DeathRegisterd=1},team=cola] armor.chest minecraft:leather_chestplate{Enchantments:[{id:unbreaking,lvl:1000},{id:binding_curse,lvl:1}],display:{color:16711680}}
 replaceitem entity @a[scores={DeathRegisterd=1},team=cecs] armor.chest minecraft:leather_chestplate{Enchantments:[{id:unbreaking,lvl:1000},{id:binding_curse,lvl:1}],display:{color:255}}
 
