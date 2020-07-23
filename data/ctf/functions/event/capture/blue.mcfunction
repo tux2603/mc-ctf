@@ -10,5 +10,5 @@ execute at @e[name="BlueBase"] run setblock ~ ~1 ~ minecraft:light_blue_banner{P
 scoreboard players set @e[name="BlueBase"] FlagPresent 1
 scoreboard players set @e[name="BlueMobile"] FlagPresent 0
 
-execute as @a[team=cola] at @s run playsound minecraft:entity.player.levelup master @s ~ ~ ~ 1023
-execute as @a[team=cecs] at @s run playsound minecraft:ambient.cave master @s ~ ~ ~ 1023
+execute as @a[team=cola] at @s run playsound minecraft:entity.player.levelup hostile @s ~ ~ ~ 1023
+execute as @a[team=cecs] at @s run playsound minecraft:ambient.cave hostile @s ~ ~ ~ 1023

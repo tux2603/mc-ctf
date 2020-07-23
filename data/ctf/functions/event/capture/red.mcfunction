@@ -10,5 +10,5 @@ execute at @e[name="RedBase"] run setblock ~ ~1 ~ minecraft:red_banner{Patterns:
 scoreboard players set @e[name="RedBase"] FlagPresent 1
 scoreboard players set @e[name="RedMobile"] FlagPresent 0
 
-execute as @a[team=cecs] at @s run playsound minecraft:entity.player.levelup master @s ~ ~ ~ 1023
-execute as @a[team=cola] at @s run playsound minecraft:ambient.cave master @s ~ ~ ~ 1023
+execute as @a[team=cecs] at @s run playsound minecraft:entity.player.levelup hostile @s ~ ~ ~ 1023
+execute as @a[team=cola] at @s run playsound minecraft:ambient.cave hostile @s ~ ~ ~ 1023

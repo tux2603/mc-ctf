@@ -13,7 +13,7 @@ execute at @e[name="RedMobile",scores={FlagPresent=1}] run setblock ~ ~ ~ minecr
 scoreboard players set @e[name="RedBase",scores={FlagPresent=1}] FlagPresent 0
 scoreboard players set @e[name="RedMobile",scores={FlagPresent=1}] FlagPresent 0
 
-execute as @a at @s run playsound minecraft:event.raid.horn master @s ~ ~ ~ 1023 1
+execute as @a at @s run playsound minecraft:event.raid.horn hostile @s ~ ~ ~ 1023 1
 
 # Remove speed from a scout that stole the flag
 effect clear @e[scores={CallStack00=1}] minecraft:speed
