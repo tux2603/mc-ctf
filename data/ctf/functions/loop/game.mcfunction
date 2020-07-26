@@ -1,17 +1,17 @@
 # A player steals a flag
-execute at @e[name="BlueBase",scores={FlagPresent=1}] if entity @e[name="RedBase",scores={FlagPresent=1}] if entity @p[team=cola,distance=..3,tag=!Tank,tag=!Spy] run scoreboard players set @p[team=cola,distance=..3] CallStack00 1
+execute at @e[name="BlueBase",scores={FlagPresent=1}] if entity @e[name="RedBase",scores={FlagPresent=1}] if entity @p[team=cola,distance=..3,tag=!Tank,tag=!Assassin] run scoreboard players set @p[team=cola,distance=..3] CallStack00 1
 execute if entity @e[scores={CallStack00=1}] run function ctf:event/steal/blue
 scoreboard players set @a CallStack00 0
 
-execute at @e[name="BlueMobile",scores={FlagPresent=1}] if entity @e[name="RedBase",scores={FlagPresent=1}] if entity @p[team=cola,distance=..3,tag=!Tank,tag=!Spy] run scoreboard players set @p[team=cola,distance=..3] CallStack00 1
+execute at @e[name="BlueMobile",scores={FlagPresent=1}] if entity @e[name="RedBase",scores={FlagPresent=1}] if entity @p[team=cola,distance=..3,tag=!Tank,tag=!Assassin] run scoreboard players set @p[team=cola,distance=..3] CallStack00 1
 execute if entity @e[scores={CallStack00=1}] run function ctf:event/steal/blue
 scoreboard players set @a CallStack00 0
 
-execute at @e[name="RedBase",scores={FlagPresent=1}] if entity @e[name="BlueBase",scores={FlagPresent=1}] if entity @p[team=cecs,distance=..3,tag=!Tank,tag=!Spy] run scoreboard players set @p[team=cecs,distance=..3] CallStack00 1
+execute at @e[name="RedBase",scores={FlagPresent=1}] if entity @e[name="BlueBase",scores={FlagPresent=1}] if entity @p[team=cecs,distance=..3,tag=!Tank,tag=!Assassin] run scoreboard players set @p[team=cecs,distance=..3] CallStack00 1
 execute if entity @e[scores={CallStack00=1}] run function ctf:event/steal/red
 scoreboard players set @a CallStack00 0
 
-execute at @e[name="RedMobile",scores={FlagPresent=1}] if entity @e[name="BlueBase",scores={FlagPresent=1}] if entity @p[team=cecs,distance=..3,tag=!Tank,tag=!Spy] run scoreboard players set @p[team=cecs,distance=..3] CallStack00 1
+execute at @e[name="RedMobile",scores={FlagPresent=1}] if entity @e[name="BlueBase",scores={FlagPresent=1}] if entity @p[team=cecs,distance=..3,tag=!Tank,tag=!Assassin] run scoreboard players set @p[team=cecs,distance=..3] CallStack00 1
 execute if entity @e[scores={CallStack00=1}] run function ctf:event/steal/red
 scoreboard players set @a CallStack00 0
 
@@ -60,11 +60,14 @@ execute at @e[name="RedBase"] run effect give @a[team=cola,distance=..5] minecra
 effect give @a[scores={HasBlueFlag=1}] minecraft:glowing 10 1 true
 effect give @a[scores={HasRedFlag=1}] minecraft:glowing 10 1 true
 
+replaceitem entity @a[tag=!Tank,scores={HasBlueFlag=0,HasRedFlag=0}] armor.head
+
 # Remove all pearls from the ground
 execute as @e[type=minecraft:item,nbt={OnGround:1b}] run kill @s
 
 # If a player used an ender pearl, start the cooldown
-scoreboard players set @a[scores={UsedPearl=1..}] PearlCooldown 200
+scoreboard players set @a[scores={UsedPearl=1..},tag=Normie] PearlCooldown 200
+scoreboard players set @a[scores={UsedPearl=1..},tag=Scout] PearlCooldown 300
 scoreboard players set @a[scores={UsedPearl=1..}] UsedPearl 0
 
 # Check to see if players have finished the cooldown and need a new pearl
@@ -85,7 +88,7 @@ tag @a[scores={DeathRegisterd=1}] remove Mage
 tag @a[scores={DeathRegisterd=1}] remove Medic
 tag @a[scores={DeathRegisterd=1}] remove Normie
 tag @a[scores={DeathRegisterd=1}] remove Scout
-tag @a[scores={DeathRegisterd=1}] remove Spy
+tag @a[scores={DeathRegisterd=1}] remove Assassin
 tag @a[scores={DeathRegisterd=1}] remove Tank
 effect clear @a[scores={DeathRegisterd=1}]
 
@@ -100,11 +103,11 @@ scoreboard players set @e[scores={IsDead=1..100}] DeathRegisterd 1
 weather clear
 
 effect give @a[tag=Normie,scores={HasBlueFlag=0,HasRedFlag=0}] minecraft:speed 1000000 1 true
+effect give @a[tag=Healer,scores={HasBlueFlag=0,HasRedFlag=0}] minecraft:speed 1000000 1 true
 effect give @a[tag=Scout,scores={HasBlueFlag=0,HasRedFlag=0}] minecraft:speed 1000000 3 true
 effect give @a[tag=Scout,scores={HasBlueFlag=1}] minecraft:speed 1000000 1 true
 effect give @a[tag=Scout,scores={HasRedFlag=1}] minecraft:speed 1000000 1 true
 effect give @a[tag=Tank] minecraft:slowness 1000000 2 true
-effect give @a[tag=Tank] minecraft:weakness 1000000 1 true
 effect give @a[tag=Tank] minecraft:jump_boost 1000000 128 true
 effect give @a[tag=Medic] minecraft:weakness 1000000 1 true
 effect give @a[tag=Medic] minecraft:jump_boost 1000000 7 true

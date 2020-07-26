@@ -38,7 +38,7 @@ tag @a[tag=JoinTank] remove JoinTank
 
 loot give @a[tag=JoinMedic] loot ctf:classes/medic
 tag @a[tag=JoinMedic] add Medic
-replaceitem entity @a[tag=JoinMedic] armor.legs minecraft:leather_leggings{Enchantments:[{id:unbreaking,lvl:1000},{id:binding_curse,lvl:1}]}
+replaceitem entity @a[tag=JoinMedic] armor.legs minecraft:leather_leggings{Enchantments:[{id:unbreaking,lvl:1000},{id:binding_curse,lvl:1},{id:protection,lvl:5},{id:blast_protection,lvl:5},{id:projectile_protection,lvl:5}]}
 replaceitem entity @a[tag=JoinMedic] armor.feet minecraft:leather_boots{Enchantments:[{id:unbreaking,lvl:1000},{id:binding_curse,lvl:1}]}
 tag @a[tag=JoinMedic] remove JoinMedic
 

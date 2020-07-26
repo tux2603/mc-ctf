@@ -1,2 +1,2 @@
 execute at @s anchored feet run setblock ~ ~ ~ minecraft:birch_sign
-execute at @s anchored feet run data merge block ~ ~ ~ {Text1:"{\"text\":\"[Standard Class]\",\"color\":\"green\",\"underlined\":true,\"clickEvent\":{\"action\":\"run_command\",\"value\":\"/tag @s add JoinNormie\"}}","Text2":"\"A little bit of armor\"","Text3":"\"A little bit of speed\"","Text4":"\"Nothing special\""}
+execute at @s anchored feet run data merge block ~ ~ ~ {Text1:"{\"text\":\"[Standard]\",\"bold\":true,\"color\":\"black\",\"underlined\":true,\"clickEvent\":{\"action\":\"run_command\",\"value\":\"/tag @s add JoinNormie\"}}","Text2":"\"Medium Armor\"","Text3":"\"Slowness Arrows\"","Text4":"\"Ender Pearl\""}

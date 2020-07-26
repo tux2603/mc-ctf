@@ -7,8 +7,8 @@ scoreboard players add BlueTeam TeamRecovered 1
 replaceitem entity @e[scores={CallStack00=1}] armor.head minecraft:air
 
 # Remove the visible flag from the field
-execute at @e[name="BlueBase",scores={FlagPresent=1}] run setblock ~ ~1 ~ minecraft:air replace
-execute at @e[name="BlueMobile",scores={FlagPresent=1}] run setblock ~ ~ ~ minecraft:air replace
+execute at @e[name="BlueBase"] run setblock ~ ~1 ~ minecraft:air replace
+execute at @e[name="BlueMobile"] run setblock ~ ~ ~ minecraft:air replace
 
 # Respawn the flag
 execute at @e[name="BlueBase"] run setblock ~ ~1 ~ minecraft:light_blue_banner{Patterns:[{Color:11,Pattern:"bo"},{Color:11,Pattern:"cbo"},{Color:11,Pattern:"mr"},{Color:8,Pattern:"mc"},{Color:0,Pattern:"flo"}]}
