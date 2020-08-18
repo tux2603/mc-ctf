@@ -25,3 +25,6 @@ scoreboard objectives add Health health "Player health"
 
 scoreboard objectives add UsedPearl minecraft.used:minecraft.ender_pearl "Player used ender pearl"
 scoreboard objectives add PearlCooldown dummy "Ender pearl cooldown"
+
+scoreboard objectives add GameTime dummy "Game run time"
+scoreboard players set Game GameTime -1

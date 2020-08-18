@@ -100,7 +100,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{Potion:\"minecraft:water\",CustomPotionEffects:[{Id:25,Amplifier:1,Duration:600}],display:{Name:\"\\\"Levitation\\\"\"}}"
+              "tag": "{Potion:\"minecraft:water\",CustomPotionEffects:[{Id:25,Amplifier:1,Duration:300}],display:{Name:\"\\\"Levitation\\\"\"}}"
             },
             {
               "function": "minecraft:set_count",
