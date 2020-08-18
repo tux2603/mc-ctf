@@ -27,4 +27,7 @@ scoreboard objectives add UsedPearl minecraft.used:minecraft.ender_pearl "Player
 scoreboard objectives add PearlCooldown dummy "Ender pearl cooldown"
 
 scoreboard objectives add GameTime dummy "Game run time"
+scoreboard objectives add IsFinal dummy "Whether or not this is the final round"
+
 scoreboard players set Game GameTime -1
+scoreboard players set Game IsFinal 0

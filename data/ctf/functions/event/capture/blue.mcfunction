@@ -3,6 +3,10 @@ scoreboard players set @e[scores={CallStack00=1}] HasBlueFlag 0
 scoreboard players add @e[scores={CallStack00=1}] FlagsCaptured 1
 scoreboard players add RedTeam TeamCaptured 1
 
+title @a[team=cola] title {"text":"Your team has scored!","color":"green"}
+title @a[team=cecs] title {"text":"The enemy has scored!","color":"green"}
+title @a subtitle [{"score":{"name":"RedTeam","objective":"TeamCaptured"},"color":"red","bold":"true"},{"text":" - ","color":"white","bold":"false"},{"score":{"name":"BlueTeam","objective":"TeamCaptured"},"color":"blue","bold":"true"}]
+
 replaceitem entity @e[scores={CallStack00=1}] armor.head minecraft:air
 
 # Respawn the flag

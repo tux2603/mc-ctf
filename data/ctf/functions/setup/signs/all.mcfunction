@@ -10,4 +10,10 @@ execute as @e[type=minecraft:armor_stand,name=SignPlacer] at @s run tp @s ~1 ~ ~
 execute as @e[type=minecraft:armor_stand,name=SignPlacer] at @s run function ctf:setup/signs/normie
 execute as @e[type=minecraft:armor_stand,name=SignPlacer] at @s run tp @s ~1 ~ ~
 execute as @e[type=minecraft:armor_stand,name=SignPlacer] at @s run function ctf:setup/signs/scout
+execute as @e[type=minecraft:armor_stand,name=SignPlacer] at @s run tp @s ~-2 ~1 ~
+execute as @e[type=minecraft:armor_stand,name=SignPlacer] at @s run function ctf:setup/signs/instruct_1
+execute as @e[type=minecraft:armor_stand,name=SignPlacer] at @s run tp @s ~1 ~ ~
+execute as @e[type=minecraft:armor_stand,name=SignPlacer] at @s run function ctf:setup/signs/instruct_2
+execute as @e[type=minecraft:armor_stand,name=SignPlacer] at @s run tp @s ~1 ~ ~
+execute as @e[type=minecraft:armor_stand,name=SignPlacer] at @s run function ctf:setup/signs/instruct_3
 execute as @e[type=minecraft:armor_stand,name=SignPlacer] at @s run kill @s

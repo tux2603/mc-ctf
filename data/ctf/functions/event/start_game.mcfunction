@@ -69,6 +69,10 @@ scoreboard players set BlueTeam TeamDropped 0
 scoreboard players set RedTeam TeamDropped 0
 
 scoreboard players set Game GameTime 0
+scoreboard players set Game IsFinal 0
 
 scoreboard objectives setdisplay sidebar TeamCaptured
 scoreboard objectives setdisplay list FlagsCaptured
+
+title @a title {"text":"Go!","color":"green","italic":"true"}
+title @a subtitle {"text":"First to 3, 10 minute time limit","color":"green"}
