@@ -29,8 +29,8 @@ tp @s -145 71 234
 execute at @s run function ctf:setup/signs/all
 
 # Setup the spawnpoints
-spawnpoint @a[team=cecs] -475 69 415
-spawnpoint @a[team=cola] -144 70 236
+spawnpoint @a[team=cecs] -480 70 415
+spawnpoint @a[team=cola] -144 71 236
 
 # Bring the flags back to base
 execute at @e[name="BlueBase"] run setblock ~ ~1 ~ minecraft:light_blue_banner{Patterns:[{Color:11,Pattern:"bo"},{Color:11,Pattern:"cbo"},{Color:11,Pattern:"mr"},{Color:8,Pattern:"mc"},{Color:0,Pattern:"flo"}]}
